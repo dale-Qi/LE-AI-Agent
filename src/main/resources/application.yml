@@ -1,20 +1,8 @@
 spring:
   application:
     name: LE-AI-Agent
-#  profiles:
-#    active: local
-#  # ?????????????????????? PgVector ??????
-#  #  datasource:
-#  #    url: xxx
-#  #    username: root
-#  #    password: 123456
-#  ai:
-#    dashscope:
-#      # ????????? key
-#      api-key: your-api-key
-#      chat:
-#        options:
-#          model: qwen-plus
+  profiles:
+    active: local
 #    ollama:
 #      base-url: http://localhost:11434
 #      chat:
