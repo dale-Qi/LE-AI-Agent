@@ -1,0 +1,66 @@
+spring:
+  application:
+    name: LE-AI-Agent
+#  profiles:
+#    active: local
+#  # ?????????????????????? PgVector ??????
+#  #  datasource:
+#  #    url: xxx
+#  #    username: root
+#  #    password: 123456
+#  ai:
+#    dashscope:
+#      # ????????? key
+#      api-key: your-api-key
+#      chat:
+#        options:
+#          model: qwen-plus
+#    ollama:
+#      base-url: http://localhost:11434
+#      chat:
+#        model: gemma3:1b
+# ???????????????????????? MCP ???
+#    mcp:
+#      client:
+#        sse:
+#          connections:
+#            server1:
+#              url: http://localhost:8127
+#        stdio:
+#          servers-configuration: classpath:mcp-servers.json
+# ???????????????????????? PgVector ????
+#    vectorstore:
+#      pgvector:
+#        index-type: HNSW
+#        dimensions: 1536
+#        distance-type: COSINE_DISTANCE
+#        max-document-batch-size: 10000 # Optional: Maximum number of documents per batch
+server:
+  port: 8123
+  servlet:
+    context-path: /api
+# springdoc-openapi config
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    tags-sorter: alpha
+    operations-sorter: alpha
+  api-docs:
+    path: /v3/api-docs
+  group-configs:
+    - group: 'default'
+      paths-to-match: '/**'
+      packages-to-scan: com.dale.leaiagent.controller
+# knife4j config
+knife4j:
+  enable: true
+  setting:
+    language: zh_cn
+# searchAPI
+#search-api:
+#  # ????????? key
+#  api-key: ?? API Key
+## ????????? Spring AI ??????
+#logging:
+#  level:
+#    org.springframework.ai: DEBUG
